@@ -1,10 +1,23 @@
-# Notebook 5: Langchain Integrations 
+---
+layout:     post
+title:      "Langchain Integrations for BigDL"
+subtitle:   " \"Hello World, Hello Blog\""
+date:       2023-08-27 21:00:00
+author:     "Potter"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+tags:
+    - LLM
+    - Tutorial
+---
+
+# Langchain Integrations 
 
 [LangChain](https://python.langchain.com/docs/get_started/introduction.html) is a popular library for developing applications powered by language models. You can use LangChain with LLMs to build various interesting applications such as [Chatbot](https://github.com/intel-analytics/BigDL/blob/main/python/llm/example/langchain/transformers_int4/chat.py), [Document Q&A](https://github.com/intel-analytics/BigDL/blob/main/python/llm/example/langchain/transformers_int4/docqa.py), [voice assistant](https://github.com/intel-analytics/BigDL/blob/main/python/llm/example/langchain/transformers_int4/voiceassistant.py). BigDL-LLM provides LangChain integrations (i.e. LLM wrappers and embeddings) and you can use them the same way as [other LLM wrappers in LangChain](https://python.langchain.com/docs/integrations/llms/). 
 
 This notebook goes over how to use langchain to interact with BigDL-LLM.
 
-## 5.1 Installation
+## Installation
 
 First of all, install BigDL-LLM in your prepared environment. For best practices of environment setup, refer to [Chapter 2]() in this tutorial.
 
@@ -24,7 +37,7 @@ Then install LangChain.
 > 
 > We recommend to use `langchain==0.0.248`, which is verified in our tutorial.
 
-## 5.3 LLM Wrapper
+## LLM Wrapper
 
 BigDL-LLM provides `TransformersLLM` and `TransformersPipelineLLM`, which implement the standard interface of LLM wrapper of LangChain.
 
@@ -85,14 +98,14 @@ print(llm_result.generations[0][0].text)
     Because it saw the salad dressing!
 
 
-## 5.4 Using Chains
+## Using Chains
 
 Now let's begin using LLM wrappers and embeddings in [Chains](https://docs.langchain.com/docs/components/chains/).
 
 >**Note**
 > Chain is an important component in LangChain, which combines a sequence of modular components (even other chains) to achieve a particular purpose. The compoents in chain may be propmt templates, models, memory buffers, etc. 
 
-### 5.4.1 LLMChain
+### LLMChain
 
 Let's first try use a simple chain `LLMChain`. 
 
@@ -126,7 +139,7 @@ result = llm_chain.run(question)
     AI stands for "Artificial Intelligence." It refers to the development of computer systems that can perform tasks that typically require human intelligence, such as visual perception, speech recognition, decision-making, and language translation. AI can be achieved through a combination of techniques such as machine learning, natural language processing, computer vision, and robotics. The ultimate goal of AI research is to create machines that can think and learn like humans, and can even exceed human capabilities in certain areas.
 
 
-### 5.4.2 Conversation Chain
+### Conversation Chain
 
 To build a chat application, we can use a more complex chain with memory buffers to remember the chat history. This is useful to enable multi-turn chat experience.
 
@@ -195,7 +208,7 @@ result = conversation_chain.run(query)
     [1m> Finished chain.[0m
 
 
-### 5.4.3 MathChain
+### MathChain
 
 Let's try use LLM solve some math problem, using `MathChain`.
 
@@ -234,17 +247,17 @@ llm_math.run(question)
 
 
 
-### 5.5 Question Answering over Docs
+### Question Answering over Docs
 Suppose you have some text documents (PDF, blog, Notion pages, etc.) and want to ask questions related to the contents of those documents. LLMs, given their proficiency in understanding text, are a great tool for this.
 
-#### 5.5.1 Installation
+#### Installation
 
 
 ```python
 pip install -U faiss-cpu
 ```
 
-#### 5.5.1 Load document
+#### Load document
 For convienence, here we use a text string as a loaded document.
 
 
@@ -262,7 +275,7 @@ input_doc = "\
     "
 ```
 
-#### 5.5.2 Split texts of input document
+#### Split texts of input document
 
 
 ```python
@@ -272,7 +285,7 @@ text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
 texts = text_splitter.split_text(input_doc)
 ```
 
-#### 5.5.3 Create embeddings and store into vectordb
+#### Create embeddings and store into vectordb
 
 BigDL-LLM provides `TransformersEmbeddings`, which allows you to obtain embeddings from text input using LLM.
 
@@ -294,7 +307,7 @@ from langchain.vectorstores import FAISS
 docsearch = FAISS.from_texts(texts, embeddings, metadatas=[{"source": str(i)} for i in range(len(texts))]).as_retriever()
 ```
 
-#### 5.5.4 Get relavant texts
+#### Get relavant texts
 
 
 ```python
@@ -308,7 +321,7 @@ print(len(docs))
     1
 
 
-#### 5.5.5 Prepare chain
+#### Prepare chain
 
 
 ```python
@@ -320,7 +333,7 @@ doc_chain = load_qa_chain(
 )
 ```
 
-#### 5.5.6 Generate
+#### Generate
 
 
 ```python
