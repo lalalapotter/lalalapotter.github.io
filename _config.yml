@@ -3,21 +3,21 @@ title: Potter Blog
 SEOTitle: 曾光的博客 | Potter Blog
 header-img: img/home-bg.jpg
 email: potterguang101@gmail.com
-description: "这里是 @Potter曾光 的个人博客，与你一起发现更大的世界 | 水到渠成"
-keyword: "曾光, Potter Blog, 互联网, AI, LLM, Big Data"
-url: "TBD" # your host, for absolute URL
-baseurl: "lalalapotter.github.io" # for example, '/blog' if your blog hosted on 'host/blog'
+description: "这里是 @Potter曾光的个人博客，与你一起发现更大的世界 | 水到渠成"
+keyword: "AI, Big Data, LLM"
+url: "lalalapotter.github.io" # your host, for absolute URL
+baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
 future: true
 
 # SNS settings
 RSS: false
-# weibo_username: 
-# zhihu_username:
-github_username: lalalapotter
-# twitter_username:
-#facebook_username:
+weibo_username: huxpro
+zhihu_username: huxpro
+github_username: huxpro
+twitter_username: huxpro
+#facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
 
 # Build settings
@@ -59,7 +59,7 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: lalalapotter
+disqus_username: hux
 
 # Netease settings
 netease_comment: false
@@ -69,13 +69,13 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-# ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-# ga_domain: huangxuan.me
+ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
+ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "做自己 <br> BigDL Team @ Intel"
-sidebar-avatar: img/bg-walle.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "要做一个有 swag 的程序员 <br> React Team @ Meta"
+sidebar-avatar: https://github.com/Huxpro.png # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
