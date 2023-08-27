@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: potterguang101@gmail.com
 description: "这里是 @Potter曾光的个人博客，与你一起发现更大的世界 | 水到渠成"
 keyword: "AI, Big Data, LLM"
-url: "lalalapotter.github.io" # your host, for absolute URL
+url: "https://lalalapotter.github.io" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -15,7 +15,7 @@ future: true
 RSS: false
 weibo_username: 
 zhihu_username: 
-github_username: 
+github_username: lalalapotter
 twitter_username: 
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
@@ -59,7 +59,7 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: hux
+disqus_username: 
 
 # Netease settings
 netease_comment: false
@@ -69,13 +69,13 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+# ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
+# ga_domain: huangxuan.me
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 swag 的程序员 <br> React Team @ Meta"
-sidebar-avatar: https://github.com/Huxpro.png # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-about-description: "开开心心做自己 <br> BigDL Team @ Intel"
+sidebar-avatar: img/bg-walle.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
@@ -90,13 +90,13 @@ page-mathjax: false
 
 # Friends
 friends:
-  [
-    { title: "乱序（Midare）", href: "http://mida.re/" },
-    { title: "Ebn Zhang", href: "https://ebnbin.dev/" },
-    { title: "Kun Qian", href: "http://kunq.me" },
-    { title: "Sherry Woo", href: "https://sherrywoo.me/" },
-    { title: "SmdCn", href: "http://blog.smdcn.net" },
-    { title: "JiyinYiyong", href: "http://tiye.me/" },
-    { title: "DHong Say", href: "http://dhong.co" },
-    { title: "尹峰以为", href: "http://ingf.github.io/" },
-  ]
+  # [
+  #   { title: "乱序（Midare）", href: "http://mida.re/" },
+  #   { title: "Ebn Zhang", href: "https://ebnbin.dev/" },
+  #   { title: "Kun Qian", href: "http://kunq.me" },
+  #   { title: "Sherry Woo", href: "https://sherrywoo.me/" },
+  #   { title: "SmdCn", href: "http://blog.smdcn.net" },
+  #   { title: "JiyinYiyong", href: "http://tiye.me/" },
+  #   { title: "DHong Say", href: "http://dhong.co" },
+  #   { title: "尹峰以为", href: "http://ingf.github.io/" },
+  # ]
